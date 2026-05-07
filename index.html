@@ -1,11 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <meta charset="UTF-8">
- <title>My First Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiskPilot | AI Risk Management for Retail Investors</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #e5eefb;
+      background: #081120;
+    }
+    header {
+      background: linear-gradient(135deg, #0b1730 0%, #12356b 55%, #1d4ed8 100%);
+      padding: 88px 24px 72px;
+    }
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: #cfe0ff;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 52px;
+      line-height: 1.08;
+      margin: 0 0 18px;
+      color: #ffffff;
+    }
+    .hero-text {
+      font-size: 20px;
+      color: #d7e5ff;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn-primary {
+      background: #ffffff;
+      color: #12356b;
+    }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #ffffff;
+      background: transparent;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.25);
+      backdrop-filter: blur(8px);
+    }
+    .metric {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: #bcd2fb;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .metric-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    main {
+      background: #f7faff;
+      color: #16243c;
+    }
+    section {
+      padding: 76px 24px;
+    }
+    h2 {
+      font-size: 34px;
+      margin: 0 0 18px;
+      color: #0e1b32;
+    }
+    .section-lead {
+      max-width: 760px;
+      font-size: 18px;
+      color: #485a79;
+      margin-bottom: 30px;
+    }
+    .grid-3, .grid-2 {
+      display: grid;
+      gap: 22px;
+    }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 26px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e6edf8;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #14315f;
+      font-size: 22px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .accent {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+    .dark-band {
+      background: #0d1830;
+      color: #e2ebff;
+    }
+    .dark-band h2, .dark-band h3 { color: #ffffff; }
+    .dark-band .section-lead { color: #c0d0f5; }
+    footer {
+      background: #09111f;
+      color: #c6d2e9;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 40px; }
+      .hero-text { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
- <h1>Hello, this is my website!</h1>
- <p>這是我用 GitHub Pages 架設的免費網站。</p>
+  <header>
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">AI Risk Management for Retail Investors</div>
+        <h1>We help retail investors understand and manage investment risk.</h1>
+        <p class="hero-text">
+          RiskPilot is a simple, AI-powered risk management platform built for retail investors.
+          We explain the risk and reward of every trade, deliver real-time risk alerts,
+          and connect spending behavior, cash flow, and portfolio exposure into one decision system.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#solution">See the Solution</a>
+          <a class="btn btn-secondary" href="#features">Explore Features</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="metric">
+          <div class="metric-label">Trade Risk Summary</div>
+          <div class="metric-value">High Concentration Risk</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">AI Alert</div>
+          <div class="metric-value">Monthly cash flow stress rising</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Suggested Action</div>
+          <div class="metric-value">Reduce position size before entry</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="problem">
+      <div class="container">
+        <h2>The Problem</h2>
+        <p class="section-lead">
+          Most retail investors focus on returns but do not truly understand risk.
+          Existing tools are often too technical, too fragmented, or too passive to help users make better decisions in real time.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Risk is hard to understand</h3>
+            <p>Retail investors often do not know the downside of a trade, the real risk-reward tradeoff, or whether a position fits their financial situation.</p>
+          </div>
+          <div class="card">
+            <h3>Tools are too complex</h3>
+            <p>Most risk metrics are built for professionals, not for everyday users who need simple, direct, and actionable guidance.</p>
+          </div>
+          <div class="card">
+            <h3>Finance and investing are disconnected</h3>
+            <p>Most platforms ignore spending behavior, monthly cash flow, and personal financial pressure when evaluating investment risk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="dark-band">
+      <div class="container">
+        <h2>Our Solution</h2>
+        <p class="section-lead">
+          RiskPilot gives retail investors a simple risk intelligence layer.
+          Instead of only looking at market data, we also incorporate portfolio structure,
+          spending patterns, and personal cash flow to produce clearer and more personalized risk guidance.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Simple for users</h3>
+            <p>We translate complex risk analytics into clear explanations, alerts, and suggested actions that non-professional investors can actually use.</p>
+          </div>
+          <div class="card">
+            <h3>Built around specialized AI</h3>
+            <p>Our platform uses <span class="accent">specially trained, risk-control-centered AI bots</span> designed to focus on disciplined decision support rather than hype-driven trading suggestions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Core Features</h2>
+        <p class="section-lead">
+          We are building an AI-powered consumer product that helps users understand every trade, monitor overall financial risk, and act with better timing.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>AI Trade Risk & Reward Analysis</h3>
+            <p>Explain the downside, upside, and risk-reward profile of each trade in a simple and intuitive way.</p>
+          </div>
+          <div class="card">
+            <h3>Real-Time AI Risk Alerts</h3>
+            <p>Send immediate warnings when market risk, position concentration, or financial stress rises.</p>
+          </div>
+          <div class="card">
+            <h3>Statistical Timing Support</h3>
+            <p>Use data and statistical logic to help users decide when to enter, wait, reduce, or avoid a trade.</p>
+          </div>
+          <div class="card">
+            <h3>Personal Financial Risk Mapping</h3>
+            <p>Connect income, expenses, liquidity, and portfolio exposure into one user-centered risk model.</p>
+          </div>
+          <div class="card">
+            <h3>LINE Spending Integration</h3>
+            <p>Import credit card spending notifications from LINE to improve monthly and quarterly risk management insights.</p>
+          </div>
+          <div class="card">
+            <h3>Retail Investor First Design</h3>
+            <p>Built specifically for retail investors who need clarity, simplicity, and confidence in decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>1. Input Your Financial Data</h3>
+            <p>Users input portfolio holdings, income, expenses, and spending records to build a complete risk profile.</p>
+          </div>
+          <div class="card">
+            <h3>2. Receive AI Risk Interpretation</h3>
+            <p>Our AI bots analyze the risk context of each trade and explain it in clear language centered on risk control.</p>
+          </div>
+          <div class="card">
+            <h3>3. Act With Better Timing</h3>
+            <p>Users receive personalized alerts and timing guidance based on changes in portfolio exposure, cash flow, and market conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="dark-band">
+      <div class="container">
+        <h2>Our Vision</h2>
+        <p class="section-lead">
+          We believe investment risk should not be understood only by professionals.
+          Our mission is to make risk management simple, personalized, and actionable for every retail investor.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-lead">
+          Interested in demos, partnerships, or pilot testing? Reach out and build the future of retail risk management with us.
+        </p>
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p>Email: your_email@example.com</p>
+          <p>LinkedIn: your_linkedin_here</p>
+          <p>Demo request: add your form link here</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 RiskPilot. Built for retail investors with AI-powered, risk-control-centered decision support.
+  </footer>
 </body>
 </html>
